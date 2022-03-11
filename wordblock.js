@@ -52,24 +52,22 @@ submit.addEventListener('click', ()=>{
                 
                 if (output.innerText.toLowerCase() == data.words[i]){
 
-                    for (let j = 0; j < foundList.length; j++) {
-                        if(foundList[j] == data.words[i]){
-                            console.log('already found');
-                        }
+                    if(foundList.includes(data.words[i])){
+                        console.log('You already found that word!');
+                        game.clear();
+                    } else {
+
+                        foundList.push(data.words[i]);
+                        console.log('word matches: ' + data.words[i]);
+                        game.clear();
+
+                        count++;
+                        countDiv.innerText = count;
+
+                        console.log(`Words found: ${count}`);
+
+                        console.log(foundList);
                     }
-
-                    console.log('word matches: ' + data.words[i]);
-                    game.clear();
-                    
-                    
-                    count++;
-                    countDiv.innerText = count;
-
-                    foundList.push(data.words[i]);
-
-                    console.log(`Words found: ${count}`);
-                    console.log(foundList);
-
                 }
                 
             }
