@@ -1,0 +1,75 @@
+body{
+    background: gray;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+.game{
+    height: 750px;
+    width: 500px;
+    border: 5px solid black;
+    margin: auto;
+    margin-top: 5vh;
+    background: white;
+
+}
+
+.board{
+    width: 99.2%;
+    height: 500px;
+    border: 2px solid black;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+}
+
+.btn{
+    border: 2px solid black;
+    padding: 0;
+    margin: 0;
+    font-size: 2rem;
+}
+.btn:active{
+    background: white;
+}
+
+.output{
+    font-size: 2rem;
+    text-align: center;
+    letter-spacing: 10px;
+    border: 2px solid black;
+    height: 50px;
+    width: 99.2%;
+}
+
+.control{
+    display: flex;
+}
+
+#submit{
+    width: 50%;
+    height: 50px;
+    border: 2px solid black;
+}
+#submit:active{
+    background: white;
+}
+
+#clear{
+    height: 50px;
+    width: 50%;
+    border: 2px solid black;
+}
+#clear:active{
+    background: white;
+}
+
+.found{
+    padding: 5px;
+}
+
+#count{
+    font-size: 5rem;
+    text-align: center;
+}
