@@ -18,9 +18,11 @@
 <body>
   
   <div class="container">
-
-    <div class="game">
-
+    <button class="startButton" id="startButton">Start</button>
+    <div class="gameOverScreen" id="gameOver">Game over</div>
+    <div class="game" id="gameArea">
+      
+      <div id="countDown">60</div>
       <div class="board">
         <button class="btn"></button>
         <button class="btn"></button>
@@ -47,7 +49,20 @@
     
       <div class="output" id="output"></div>
 
-      <div class="found">Words Found: <div id="count">0</div></div>
+      <div class="scoreArea">
+        <div class="wordsFoundText">
+          Words found:
+          <div class="wordsCount" id="count">0</div>
+        </div>
+
+        <div class="score">
+          <div class="scoreText">
+            Score:
+
+            <div class="scoreAmount" id="score">0</div>
+          </div>
+        </div>
+      </div>
 
     </div>
 
