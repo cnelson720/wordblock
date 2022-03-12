@@ -66,6 +66,9 @@ body{
 .btn:active{
     background: #c4eaff;
 }
+.btn:disabled{
+    background: gray;
+}
 
 .output{
     margin-top: 2%;

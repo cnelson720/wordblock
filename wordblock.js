@@ -35,7 +35,7 @@ const scoreDiv = document.getElementById('score');
 let score = parseInt(scoreDiv.innerText);
 const timerDiv = document.getElementById('countDown');
 const gameOverScreen = document.getElementById('gameOver');
-let timeLeft = 59;
+let timeLeft = 14;
 
 let foundList = [];
 
@@ -89,7 +89,8 @@ for (let i = 0; i < button.length; i++) {
     button[i].addEventListener('click', ()=>{
         var pressed = button[i].innerText;
 
-        if (output.innerText.length > 16){
+        if (output.innerText.length > 15){
+            output.style.fontSize = '2rem';
             return;
         }
         
