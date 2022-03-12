@@ -35,7 +35,7 @@ const scoreDiv = document.getElementById('score');
 let score = parseInt(scoreDiv.innerText);
 const timerDiv = document.getElementById('countDown');
 const gameOverScreen = document.getElementById('gameOver');
-let timeLeft = 60;
+let timeLeft = 59;
 
 let foundList = [];
 
