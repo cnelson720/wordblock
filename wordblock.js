@@ -48,16 +48,7 @@ function gameOver(){
     location.reload();
 }
 
-let timer = setInterval(function(){
-    if(timeLeft <= 0){
-        clearInterval(timer);
-        timerDiv.innerText = 'Game over!';
-        gameOver();
-    } else {
-        timerDiv.innerText = timeLeft;
-    }
-    timeLeft -= 1;
-}, 1000);
+
 
 
 function randInt(max){
@@ -82,6 +73,16 @@ for (let i in button){
 startButton.addEventListener('click', ()=>{
     gameDiv.style.display = 'block';
     startButton.style.display = 'none';
+    let timer = setInterval(function(){
+        if(timeLeft <= 0){
+            clearInterval(timer);
+            timerDiv.innerText = 'Game over!';
+            gameOver();
+        } else {
+            timerDiv.innerText = timeLeft;
+        }
+        timeLeft -= 1;
+    }, 1000);
 });
 
 for (let i = 0; i < button.length; i++) {

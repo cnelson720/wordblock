@@ -1,75 +1,123 @@
 body{
-    background: gray;
+    background: rgb(59, 59, 59);
     font-family: Arial, Helvetica, sans-serif;
 }
 
+.game{
+    height: 875px;
+    width: 550px;
+    margin: auto;
+    margin-top: 10vh;
+    background: rgb(128, 156, 165);
+    display: none;
+    border-radius: 15px;
+
+    box-shadow: 2px 2px 5px black;
+}
 .startButton{
+    display: block;
+    margin: auto;
+    margin-top: 50vh;
+
+    height: 10vh;
     width: 25vw;
-    height: 15vh;
-    border-radius: 25px;
     border-style: none;
-    font-size: 2rem;
+    border-radius: 25px;
+    border-right: 5px solid #246e96;
+    border-bottom: 5px solid #246e96;
+    box-shadow: 2px 2px 5px black;
+
+    background: #3ab0f0;
+    color: white;
+    font-size: 4rem;
+    font-weight: 700;
+    text-shadow: 1px 1px black;
 }
 .startButton:active{
-    background: white;
+    background: #c4eaff;
 }
 
-.game{
-    height: 850px;
-    width: 500px;
-    border: 5px solid black;
-    margin: auto;
-    margin-top: 5vh;
-    background: white;
-    display: none;
-}
+
 
 .board{
-    width: 99.2%;
-    height: 500px;
-    border: 2px solid black;
-
     display: grid;
+    height: 525px;
+    padding: 0% 2% 2% 2%;
+    column-gap: 2px;
+    row-gap: 2px;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(4, 1fr);
 }
 
 .btn{
-    border: 2px solid black;
+    background: #3ab0f0;
+    border-style: none;
+    border-radius: 10px;
+    border-right: 5px solid #246e96;
+    border-bottom: 5px solid #246e96;
+    box-sizing: border-box;
     padding: 0;
     margin: 0;
-    font-size: 2rem;
+    font-size: 5rem;
+    color: white;
+    text-shadow: 2px 2px #246e96;
+    font-weight: 750;
 }
 .btn:active{
-    background: white;
+    background: #c4eaff;
 }
 
 .output{
-    font-size: 2rem;
+    margin-top: 2%;
+    padding-bottom: 2%;
+    font-size: 3rem;
     text-align: center;
     letter-spacing: 10px;
-    border: 2px solid black;
     height: 50px;
-    width: 99.2%;
+    color: white;
+    text-shadow: 1px 1px black;
 }
 
 .control{
     display: flex;
+    padding: 0% 2% 0% 2%;
 }
 
 #submit{
     width: 50%;
     height: 50px;
-    border: 2px solid black;
+    background: #3ab0f0;
+    border-style: none;
+    border-radius: 10px;
+    border-right: 5px solid #246e96;
+    border-bottom: 5px solid #246e96;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-size: 1rem;
+    color: white;
+    text-shadow: 2px 2px #246e96;
+    font-weight: 750;
 }
 #submit:active{
     background: white;
 }
 
 #clear{
-    height: 50px;
     width: 50%;
-    border: 2px solid black;
+    height: 50px;
+    background: #3ab0f0;
+    border-style: none;
+    border-radius: 10px;
+    border-right: 5px solid #246e96;
+    border-bottom: 5px solid #246e96;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-size: 1rem;
+    color: white;
+    text-shadow: 2px 2px #246e96;
+    font-weight: 750;
 }
 #clear:active{
     background: white;
@@ -79,28 +127,31 @@ body{
     width: 100%;
     display: grid;
     grid-template-columns: 1fr 1fr;
+    color: white;
+    text-shadow: 1px 1px black;
 }
 
 .scoreText{
-    display: flex;
+
 }
 .scoreAmount{
     font-size: 5rem;
-    margin: auto;
-    margin-top: 10%;
+    text-align: center;
 }
 
 .wordsFoundText{
-    display: flex;
+    padding-left: 5%;
 }
 .wordsCount{
     font-size: 5rem;
-    margin-top: 10%;
+    text-align: center;
 }
 
 #countDown{
     font-size: 5rem;
     text-align: center;
+    color: white;
+    text-shadow: 2px 2px black;
 }
 #gameOver{
     display: none;
