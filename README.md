@@ -4,7 +4,7 @@ simple word finding game
 
 Rules:
   game begins when you hit start
-  you have 60 seconds to create as many words with a random set of 16 letters. Each letter in the word you enter is worth 1 point.
+  you have 15 seconds to create as many words with a random set of 16 letters. Each letter in the word you enter is worth 1 point.
   you cannot enter words you have already entered.
   it will also count how many words you have found.
   
