@@ -11,6 +11,7 @@
   <link rel="stylesheet" href="styles.css">
   <script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>
   <script type="text/javascript" src="wordblock.js" defer></script>
+  <script type="text/javascript" src="ref.js" defer></script>
   
 
 </head>
@@ -19,11 +20,11 @@
   
   <div class="container">
     <button class="startButton" id="startButton">start</button>
-    <div class="gameOverScreen" id="gameOver">game over</div>
     <div class="game" id="gameArea">
       
-      <div id="countDown">15</div>
+      <div id="countDown">30</div>
       <div class="board">
+
         <button class="btn"></button>
         <button class="btn"></button>
         <button class="btn"></button>
@@ -65,7 +66,28 @@
       </div>
 
     </div>
+    
 
+    <div class='modal' id="gameOverModal">
+
+      <div class="modal-content">
+        <form action="#" method="post" id="hiscoresForm">
+          <div class="nameInfo">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" maxlength="20">
+          </div>
+          <br>
+          <div class="scoreInfo">
+            <label for="wordCount">You found <span id="wordScoreFinal"></span> words!</label>
+            <br>
+            <label for="score">You scored <span id="scoreFinal"></span> points!</label>
+          </div>
+          <button class='submitScoreBtn' type="submit" value="Submit">Submit score</button>
+        </form>
+        
+      </div>
+
+    </div>
 
 
 

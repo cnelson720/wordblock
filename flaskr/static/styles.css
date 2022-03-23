@@ -1,0 +1,281 @@
+:root{
+    --main-color: #2A9D8F;
+    --dark-color: #264653;
+}
+
+.modal{
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.9);
+}
+
+.modal-content{
+    background-color: var(--main-color);
+    margin: 40vh auto;
+    padding: 20px;
+    border: 10px solid var(--dark-color);
+    border-radius: 15px;
+    width: 25%;
+    height: 25%;
+
+    text-align: center;
+    color: white;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+}
+.submitScoreBtn{
+    background: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+}
+
+.scoreInfo{
+    margin-bottom: 10%;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+.game{
+    height: 875px;
+    width: 550px;
+    margin: auto;
+    margin-top: 10vh;
+    background: var(--main-color);
+    display: none;
+    border-radius: 15px;
+    border: 10px solid var(--dark-color);
+
+    box-shadow: 0px 0px 10px var(--dark-color);
+}
+.startButton{
+    display: block;
+    margin: auto;
+    margin-top: 50vh;
+    height: 10vh;
+    width: 210px;
+
+    border-radius: 20px;
+    border-style: none;
+    border-right: 10px solid var(--dark-color);
+    border-bottom: 10px solid var(--dark-color);
+    background: var(--main-color);
+
+    color: white;
+    font-size: 3rem;
+    font-weight: 700;
+    text-shadow: 1px 1px var(--dark-color);
+}
+.startButton:active{
+    background: #c4eaff;
+}
+
+
+
+.board{
+    display: grid;
+    height: 525px;
+    padding: 0% 5% 5% 5%;
+    column-gap: 2px;
+    row-gap: 2px;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+}
+
+.btn{
+    background: var(--main-color);
+    border-style: none;
+    border-radius: 10px;
+    border-right: 10px solid var(--dark-color);
+    border-bottom: 10px solid var(--dark-color);
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-size: 5rem;
+    color: white;
+    text-shadow: 2px 2px var(--dark-color);
+    font-weight: 750;
+}
+.btn:active{
+    background: #c4eaff;
+}
+.btn:disabled{
+    background: gray;
+}
+
+.output{
+    margin-top: 2%;
+    padding-bottom: 2%;
+    font-size: 3rem;
+    text-align: center;
+    letter-spacing: 10px;
+    height: 50px;
+    color: white;
+    text-shadow: 1px 1px black;
+}
+
+.control{
+    display: flex;
+    padding: 0% 2% 0% 2%;
+}
+
+#submit{
+    width: 50%;
+    height: 50px;
+    background: var(--main-color);
+    border-style: none;
+    border-radius: 10px;
+    border-right: 10px solid var(--dark-color);
+    border-bottom: 10px solid var(--dark-color);
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-size: 1rem;
+    color: white;
+    text-shadow: 2px 2px var(--dark-color);
+    font-weight: 750;
+}
+#submit:active{
+    background: white;
+}
+
+#clear{
+    width: 50%;
+    height: 50px;
+    background: var(--main-color);
+    border-style: none;
+    border-radius: 10px;
+    border-right: 10px solid var(--dark-color);
+    border-bottom: 10px solid var(--dark-color);
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-size: 1rem;
+    color: white;
+    text-shadow: 2px 2px var(--dark-color);
+    font-weight: 750;
+}
+#clear:active{
+    background: white;
+}
+
+.scoreArea{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    color: white;
+    text-shadow: 1px 1px var(--dark-color);
+}
+
+.scoreText{
+
+}
+.scoreAmount{
+    font-size: 5rem;
+    text-align: center;
+}
+
+.wordsFoundText{
+    padding-left: 5%;
+}
+.wordsCount{
+    font-size: 5rem;
+    text-align: center;
+}
+
+#countDown{
+    font-size: 5rem;
+    text-align: center;
+    color: white;
+    text-shadow: 2px 2px var(--dark-color);
+}
+#gameOver{
+    display: none;
+}
+
+
+
+/** mobile **/
+@media only screen and (max-width: 500px) {
+
+    .modal-content{
+        margin: 30vh auto;
+        padding: 0;
+        height: 50vh;
+        width: 75vw;
+        padding-left: 5%;
+        padding-right: 5%;
+        text-align: center;
+        color: white;
+    
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .submitScoreBtn{
+        background: white;
+        border: none;
+        border-radius: 5px;
+        font-size: 1rem;
+        height: 50px;
+    }
+    
+    .scoreInfo{
+        margin-bottom: 10%;
+    }
+
+    .startButton{
+        font-size: 1.5rem;
+        text-align: center;
+    }
+
+    .game{
+        width: auto;
+        height: 90vh;
+        margin-top: 0;
+    }
+
+    .board{
+        height: 50vh;
+        column-gap: 0px;
+        row-gap: 0px;
+    }
+
+    .btn{
+        font-size: 2rem;
+    }
+
+    #countDown{
+        font-size: 3rem;
+    }
+
+    .output{
+        font-size: 1rem;
+        padding-bottom: 0;
+        margin-top: 3%;
+        height: 25px;
+    }
+    
+    .scoreArea{
+        font-size: 1rem;
+    }
+}
+
+#score{
+    display: none;
+}
+
+#wordScore{
+    display: none;
+}

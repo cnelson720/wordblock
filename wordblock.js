@@ -23,29 +23,60 @@ class Wordblock{
 
 
 const alph = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+//buttons
 const startButton = document.getElementById('startButton');
-const gameDiv = document.getElementById('gameArea');
 const button = document.getElementsByClassName('btn');
-const output = document.getElementById('output');
 const submit = document.getElementById('submit');
 const clear = document.getElementById('clear');
-const countDiv = document.getElementById('count');
-let count = parseInt(countDiv.innerText);
-const scoreDiv = document.getElementById('score');
-let score = parseInt(scoreDiv.innerText);
-const timerDiv = document.getElementById('countDown');
-const gameOverScreen = document.getElementById('gameOver');
-let timeLeft = 14;
 
+//divs
+const output = document.getElementById('output');
+const gameDiv = document.getElementById('gameArea');
+const countDiv = document.getElementById('count');
+const scoreDiv = document.getElementById('score');
+const timerDiv = document.getElementById('countDown');
+
+//scores
+let count = parseInt(countDiv.innerText);
+let score = parseInt(scoreDiv.innerText);
+
+//gameOver
+const gameOverModal = document.getElementById('gameOverModal');
+const finalWordScore = document.getElementById('wordScoreFinal');
+const finalScore = document.getElementById('scoreFinal');
+
+//hiscores
+const scoreForm = document.getElementById('hiscoresForm');
+const elementName = scoreForm.elements[0];
+let name = elementName.value;
+
+//game length
+let timeLeft = 1;
+
+//list of found words
 let foundList = [];
 
+//game object
 let game = new Wordblock(output, button);
 
+function requireValue(input){
+    return !(input.value.trim() === '');
+}
+
 function gameOver(){
-    alert(
-        `You found ${foundList.length} words\nYou scored ${score} points\nStarting over..`
-    );
-    location.reload();
+    finalWordScore.innerText = count;
+    finalScore.innerText = score;
+    gameOverModal.style.display = 'block';
+
+    scoreForm.addEventListener('submit',(e)=>{
+        requiredFields.forEach((input) =>{
+            valid = valid|requireValue(input.input);
+        });
+        if (!valid){
+            e.preventDefault();
+        }
+    });
+    //location.reload();
 }
 
 
@@ -144,3 +175,6 @@ clear.addEventListener('click', ()=>{
     game.clear();
     game.enableAll();
 })
+
+
+

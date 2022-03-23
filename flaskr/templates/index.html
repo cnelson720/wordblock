@@ -1,0 +1,101 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Word Block</title>
+  <meta name="description" content="word block game">
+
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+
+  <script type="text/javascript" src="{{ url_for('static', filename='wordblock.js') }}" defer></script>
+  
+
+</head>
+
+<body>
+  
+  <div class="container">
+    <button class="startButton" id="startButton">start</button>
+    <div class="game" id="gameArea">
+      
+      <div id="countDown">30</div>
+      <div class="board">
+
+        <button class="btn"></button>
+        <button class="btn"></button>
+        <button class="btn"></button>
+        <button class="btn"></button>
+        <button class="btn"></button>
+        <button class="btn"></button>
+        <button class="btn"></button>
+        <button class="btn"></button>
+        <button class="btn"></button>
+        <button class="btn"></button>
+        <button class="btn"></button>
+        <button class="btn"></button>
+        <button class="btn"></button>
+        <button class="btn"></button>
+        <button class="btn"></button>
+        <button class="btn"></button>
+      </div>
+
+      <div class="control">
+        <button id="submit">Submit</button>
+        <button id="clear">Clear</button>
+      </div>
+    
+      <div class="output" id="output"></div>
+
+      <div class="scoreArea">
+        <div class="wordsFoundText">
+          Words found:
+          <div class="wordsCount" id="count">0</div>
+        </div>
+
+        <div class="score">
+          <div class="scoreText">
+            Score:
+
+            <div class="scoreAmount" id="scoreTemp">0</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    
+
+    <div class='modal' id="gameOverModal">
+
+      <div class="modal-content">
+        <form method="post" id="hiscoresForm">
+          <div class="nameInfo">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" maxlength="20">
+          </div>
+          <br>
+          <div class="scoreInfo">
+            <label for="wordCount">You found <span id="wordScoreFinalText"></span> words!</label>
+            <br>
+            <label for="score">You scored <span id="scoreFinalText"></span> points!</label>
+          </div>
+
+          <input type="text" id="wordScore" name='wordScore' readonly>
+          <input type="text" id="score" name="score" readonly>
+          <button class='submitScoreBtn' type="submit" value="Submit">Submit score</button>
+        </form>
+        
+      </div>
+
+    </div>
+
+
+
+
+
+  </div>
+  
+</body>
+</html>

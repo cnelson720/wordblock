@@ -1,0 +1,42 @@
+:root{
+    --main-color: #2A9D8F;
+    --dark-color: #264653;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    background: #a9b1b4;
+}
+
+#hiscores-table{
+    margin-top: 5vh;
+    background: var(--main-color);
+    width: 100%;
+    border: 10px solid var(--dark-color);
+    text-align: center;
+    border-collapse: collapse;
+    table-layout: fixed;
+}
+
+#header{
+    font-size: 1.5rem;
+    background: var(--dark-color);
+}
+
+.tableRow{
+    border-bottom: 10px solid var(--dark-color);
+}
+
+.tableData{
+    font-size: 2rem;
+    padding: 1%;
+    margin: 0;
+}
+
+.playAgain{
+    text-decoration: none;
+    color: white;
+    background: var(--dark-color);
+    padding: 1%;
+}

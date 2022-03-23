@@ -1,0 +1,37 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Word Block high scores</title>
+  <meta name="description" content="word block game">
+
+  <link rel="stylesheet" href="{{ url_for('static', filename='hiscores.css') }}">
+
+  <script type="text/javascript" src="{{ url_for('static', filename='tablesort.js') }}" defer></script>
+  
+
+</head>
+
+<body onload="sortTable()">
+    <a class="playAgain" href="{{ url_for('index') }}">Play again!</a>
+
+    <table id="hiscores-table">
+        <tr id="header">
+            <th class="header-element">Name</th>
+            <th class="header-element">Words Found</th>
+            <th class="header-element">Score</th>
+        </tr>
+
+        {% for user in data %}
+        <tr class="tableRow">
+            <td class="tableData">{{user.name}}</td>
+            <td class="tableData">{{user.wordScore}}</td>
+            <td class="tableData">{{user.score}}</td>
+        </tr>
+        {% endfor %}
+        
+    </table>
+</body>

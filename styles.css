@@ -1,37 +1,81 @@
+:root{
+    --main-color: #2A9D8F;
+    --dark-color: #264653;
+}
+
+.modal{
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.9);
+}
+
+.modal-content{
+    background-color: var(--main-color);
+    margin: 40vh auto;
+    padding: 20px;
+    border: 10px solid var(--dark-color);
+    border-radius: 15px;
+    width: 25%;
+    height: 25%;
+
+    text-align: center;
+    color: white;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+}
+.submitScoreBtn{
+    background: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+}
+
+.scoreInfo{
+    margin-bottom: 10%;
+}
+
 body{
-    background: rgb(59, 59, 59);
     font-family: Arial, Helvetica, sans-serif;
 }
+
 
 .game{
     height: 875px;
     width: 550px;
     margin: auto;
     margin-top: 10vh;
-    background: rgb(128, 156, 165);
+    background: var(--main-color);
     display: none;
     border-radius: 15px;
+    border: 10px solid var(--dark-color);
 
-    box-shadow: 2px 2px 5px black;
+    box-shadow: 0px 0px 10px var(--dark-color);
 }
 .startButton{
     display: block;
     margin: auto;
     margin-top: 50vh;
-
     height: 10vh;
-    width: 25vw;
-    border-style: none;
-    border-radius: 25px;
-    border-right: 5px solid #246e96;
-    border-bottom: 5px solid #246e96;
-    box-shadow: 2px 2px 5px black;
+    width: 210px;
 
-    background: #3ab0f0;
+    border-radius: 20px;
+    border-style: none;
+    border-right: 10px solid var(--dark-color);
+    border-bottom: 10px solid var(--dark-color);
+    background: var(--main-color);
+
     color: white;
-    font-size: 4rem;
+    font-size: 3rem;
     font-weight: 700;
-    text-shadow: 1px 1px black;
+    text-shadow: 1px 1px var(--dark-color);
 }
 .startButton:active{
     background: #c4eaff;
@@ -42,7 +86,7 @@ body{
 .board{
     display: grid;
     height: 525px;
-    padding: 0% 2% 2% 2%;
+    padding: 0% 5% 5% 5%;
     column-gap: 2px;
     row-gap: 2px;
     grid-template-columns: repeat(4, 1fr);
@@ -50,17 +94,17 @@ body{
 }
 
 .btn{
-    background: #3ab0f0;
+    background: var(--main-color);
     border-style: none;
     border-radius: 10px;
-    border-right: 5px solid #246e96;
-    border-bottom: 5px solid #246e96;
+    border-right: 10px solid var(--dark-color);
+    border-bottom: 10px solid var(--dark-color);
     box-sizing: border-box;
     padding: 0;
     margin: 0;
     font-size: 5rem;
     color: white;
-    text-shadow: 2px 2px #246e96;
+    text-shadow: 2px 2px var(--dark-color);
     font-weight: 750;
 }
 .btn:active{
@@ -89,17 +133,17 @@ body{
 #submit{
     width: 50%;
     height: 50px;
-    background: #3ab0f0;
+    background: var(--main-color);
     border-style: none;
     border-radius: 10px;
-    border-right: 5px solid #246e96;
-    border-bottom: 5px solid #246e96;
+    border-right: 10px solid var(--dark-color);
+    border-bottom: 10px solid var(--dark-color);
     box-sizing: border-box;
     padding: 0;
     margin: 0;
     font-size: 1rem;
     color: white;
-    text-shadow: 2px 2px #246e96;
+    text-shadow: 2px 2px var(--dark-color);
     font-weight: 750;
 }
 #submit:active{
@@ -109,17 +153,17 @@ body{
 #clear{
     width: 50%;
     height: 50px;
-    background: #3ab0f0;
+    background: var(--main-color);
     border-style: none;
     border-radius: 10px;
-    border-right: 5px solid #246e96;
-    border-bottom: 5px solid #246e96;
+    border-right: 10px solid var(--dark-color);
+    border-bottom: 10px solid var(--dark-color);
     box-sizing: border-box;
     padding: 0;
     margin: 0;
     font-size: 1rem;
     color: white;
-    text-shadow: 2px 2px #246e96;
+    text-shadow: 2px 2px var(--dark-color);
     font-weight: 750;
 }
 #clear:active{
@@ -131,7 +175,7 @@ body{
     display: grid;
     grid-template-columns: 1fr 1fr;
     color: white;
-    text-shadow: 1px 1px black;
+    text-shadow: 1px 1px var(--dark-color);
 }
 
 .scoreText{
@@ -154,8 +198,78 @@ body{
     font-size: 5rem;
     text-align: center;
     color: white;
-    text-shadow: 2px 2px black;
+    text-shadow: 2px 2px var(--dark-color);
 }
 #gameOver{
     display: none;
+}
+
+
+
+/** mobile **/
+@media only screen and (max-width: 500px) {
+
+    .modal-content{
+        margin: 30vh auto;
+        padding: 0;
+        height: 50vh;
+        width: 75vw;
+        padding-left: 5%;
+        padding-right: 5%;
+        text-align: center;
+        color: white;
+    
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .submitScoreBtn{
+        background: white;
+        border: none;
+        border-radius: 5px;
+        font-size: 1rem;
+        height: 50px;
+    }
+    
+    .scoreInfo{
+        margin-bottom: 10%;
+    }
+
+    .startButton{
+        font-size: 1.5rem;
+        text-align: center;
+    }
+
+    .game{
+        width: auto;
+        height: 85vh;
+        margin-top: 0;
+    }
+
+    .board{
+        height: 50vh;
+        column-gap: 0px;
+        row-gap: 0px;
+    }
+
+    .btn{
+        height: 80px;
+        width: 86px;
+        font-size: 2rem;
+    }
+
+    #countDown{
+        font-size: 3rem;
+    }
+
+    .output{
+        font-size: 1rem;
+        padding-bottom: 0;
+        margin-top: 3%;
+        height: 25px;
+    }
+    
+    .scoreArea{
+        font-size: 1rem;
+    }
 }
