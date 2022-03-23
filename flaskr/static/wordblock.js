@@ -53,7 +53,7 @@ const elementName = scoreForm.elements[0];
 let name = elementName.value;
 
 //game length
-let timeLeft = 15;
+let timeLeft = 29;
 
 //list of found words
 let foundList = [];
@@ -81,8 +81,6 @@ function gameOver(){
         }
     });
     //location.reload();
-
-
 }
 
 
